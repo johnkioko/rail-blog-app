@@ -1,2 +1,18 @@
-<h1> users </h1>
-<p> Lists of all users </p>
+<div class='center'>
+    <div>
+        <%= "Total number of users: #{@users.length}" %>
+    </div>
+    <% @users.each do |user| %>
+        <div class='userDiv'>
+            <div>
+                <%= image_tag user.photo %>
+            </div>
+            <div class='border flex'>
+                <%= link_to user.name, user %>
+                <div class='bottom_flex'>
+                    <%= "Number of posts: #{user.post_counter}" %>
+                </div>
+            </div>
+        </div>
+    <% end %>
+</div>
