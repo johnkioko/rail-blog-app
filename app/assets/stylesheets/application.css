@@ -1,15 +1,89 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+}
+
+.jstSbt {
+  justify-content: space-between;
+}
+
+.gap {
+  gap: 1rem;
+}
+
+.gap2 {
+  gap: 0.2rem;
+}
+
+.border {
+  border: 1px solid #111;
+
+  /* width: fit-content; */
+  width: 90%;
+  padding: 1rem;
+  gap: 1rem;
+  position: relative;
+}
+
+.bottom_flex {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+
+.userDiv {
+  display: flex;
+  gap: 1rem;
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+.center,
+.center2 {
+  display: flex;
+
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+
+  /* width: 100%; */
+
+  /* margin: auto; */
+
+  /* gap: 1rem; */
+}
+
+.column {
+  flex-direction: column;
+}
+
+.borBtm {
+  margin-bottom: 0.5rem;
+  width: 95%;
+}
+
+.border2 {
+  border: 1px solid #111;
+}

@@ -1,2 +1,43 @@
-<h1>users</h1>
-<p> Shows info of a single users</p>
+<div class='center'>
+    <div class="flex">
+        <div>
+            <%= image_tag @user.photo %>
+        </div>
+        <div class="border">
+            <div>
+                <%= @user.name %>
+            </div>
+            <div class='bottom_flex'>
+                <%= "Number of posts: #{@user.post_counter} " %>
+            </div>
+        </div>
+    </div>
+    <div class='border'>
+        <p>Bio</p>
+        <%= @user.bio %>
+    </div>
+
+    <div class='borBtm'>
+        <% @user.three_posts.each do |post| %>
+            <div class='border borBtm flex jstSbt'>
+                <div>
+                    <div>
+                        <%= " Post: #{post.title }"%>
+                    </div>
+                    </br>
+                    <div>
+                        <%= " Text: #{post.text}" %>
+                    </div>
+                </div>
+                <div>
+                    <%= "Comments: #{post.comment_counter}" %>
+                    <%= "Likes: #{post.likes_counter}" %>
+                </div>
+            </div>
+        <% end %>
+    </div>
+
+    <button>
+    <%= link_to "See all posts" , user_posts_path(@user.id) %>
+</button>
+</div>
